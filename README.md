@@ -66,3 +66,31 @@ GitHub Actions 会自动创建 Release 并附上 `manifest.json` 与 `theme.css`
 ## License
 
 MIT
+
+---
+
+## English
+
+An Obsidian theme inspired by the design of [Wolai](https://www.wolai.com), offering a clean and modern note-taking experience.
+
+### Features
+
+- Clean, minimal visual style with reduced visual clutter
+- Light and dark mode support
+- Optimized Chinese typography (PingFang SC, Microsoft YaHei)
+- Comfortable line spacing and layout for long reading sessions
+- Styled code blocks, tables, and blockquotes
+- Rounded, card-style UI elements
+
+### Installation
+
+**From the community theme store**
+
+1. Open Obsidian → Settings → Appearance → Themes → Manage
+2. Search for **Wolai** and click Install
+
+**Manual installation**
+
+1. Download `theme.css` and `manifest.json`
+2. Place them in `.obsidian/themes/Wolai/` inside your vault
+3. Open Obsidian → Settings → Appearance → Themes, and select **Wolai**
