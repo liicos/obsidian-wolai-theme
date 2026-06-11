@@ -1,0 +1,12 @@
+# vscode
+.vscode
+
+# Intellij
+*.iml
+.idea
+
+# npm
+node_modules
+
+# macOS
+.DS_Store

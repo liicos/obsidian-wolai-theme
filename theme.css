@@ -124,8 +124,8 @@ body {
   --background-primary-alt:           #141416;
   --background-secondary:             #141416;
   --background-secondary-alt:         #0f0f11;
-  --background-modifier-border:       #3e3e3e;
-  --background-modifier-border-hover: #4e4e4e;
+  --background-modifier-border:       #2c2c2e;
+  --background-modifier-border-hover: #383838;
   --background-modifier-border-focus: rgba(207, 86, 89, 0.5);
   --background-modifier-hover:        #323232;
   --background-modifier-active-hover: #2e1e1e;
@@ -154,7 +154,7 @@ body {
   --scrollbar-active-thumb-bg:   #4e4e4e;
 
   /* Components */
-  --divider-color:               #3e3e3e;
+  --divider-color:               #2c2c2e;
   --code-background:             #141416;
   --code-normal:                 #e07075;
   --tag-background:              #2e1e1e;
@@ -166,7 +166,7 @@ body {
   --blockquote-color:            #bdbdbd;
   --table-header-background:     #141416;
   --table-row-alt-background:    #1e1e20;
-  --table-border-color:          #3e3e3e;
+  --table-border-color:          #2c2c2e;
   --hr-color:                    #3e3e3e;
   --checkbox-color:              #CF5659;
   --checkbox-color-hover:        #e07075;
@@ -257,8 +257,11 @@ body {
 }
 
 .workspace-tab-header.is-active {
-  border-top: 2px solid var(--interactive-accent);
   box-shadow: none;
+}
+
+.workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  font-weight: 600;
 }
 
 /* =========================================
