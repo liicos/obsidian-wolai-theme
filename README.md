@@ -1,6 +1,10 @@
 # Wolai
 
+[![Community Theme](https://img.shields.io/badge/Obsidian-Community%20Theme-7c3aed)](https://community.obsidian.md/themes/wolai)
+
 一个受 [Wolai](https://www.wolai.com) 设计风格启发的 Obsidian 主题，追求简洁、现代的笔记体验。
+
+也可在 [Obsidian 社区主题页](https://community.obsidian.md/themes/wolai) 查看详情并安装。
 
 ## 特性
 
@@ -13,14 +17,16 @@
 
 ## 安装
 
-### 通过社区主题市场
+### 通过社区主题市场（推荐）
 
 1. 打开 Obsidian → 设置 → 外观 → 主题 → 管理
 2. 搜索 **Wolai**，点击安装
 
+或访问社区主题页：[community.obsidian.md/themes/wolai](https://community.obsidian.md/themes/wolai)
+
 ### 手动安装
 
-1. 下载 `theme.css` 和 `manifest.json`
+1. 从 [Releases](https://github.com/liicos/obsidian-wolai-theme/releases/latest) 下载 `theme.css` 和 `manifest.json`
 2. 将文件放入你的 Obsidian vault 的 `.obsidian/themes/Wolai/` 目录
 3. 打开 Obsidian → 设置 → 外观 → 主题，选择 **Wolai**
 
@@ -57,11 +63,17 @@ ln -s $(pwd) "/path/to/your/vault/.obsidian/themes/Wolai"
 3. 创建与版本号一致的 tag 并推送，例如：
 
 ```bash
-git tag 1.0.0
-git push origin 1.0.0
+git tag 1.0.1
+git push origin 1.0.1
 ```
 
 GitHub Actions 会自动创建 Release 并附上 `manifest.json` 与 `theme.css`。
+
+## 链接
+
+- 社区主题页：https://community.obsidian.md/themes/wolai
+- GitHub 仓库：https://github.com/liicos/obsidian-wolai-theme
+- 最新 Release：https://github.com/liicos/obsidian-wolai-theme/releases/latest
 
 ## License
 
@@ -71,7 +83,11 @@ MIT
 
 ## English
 
+[![Community Theme](https://img.shields.io/badge/Obsidian-Community%20Theme-7c3aed)](https://community.obsidian.md/themes/wolai)
+
 An Obsidian theme inspired by the design of [Wolai](https://www.wolai.com), offering a clean and modern note-taking experience.
+
+View the listing at [community.obsidian.md/themes/wolai](https://community.obsidian.md/themes/wolai).
 
 ### Features
 
@@ -84,13 +100,21 @@ An Obsidian theme inspired by the design of [Wolai](https://www.wolai.com), offe
 
 ### Installation
 
-**From the community theme store**
+**From the community theme store (recommended)**
 
 1. Open Obsidian → Settings → Appearance → Themes → Manage
 2. Search for **Wolai** and click Install
 
+Or visit [community.obsidian.md/themes/wolai](https://community.obsidian.md/themes/wolai).
+
 **Manual installation**
 
-1. Download `theme.css` and `manifest.json`
+1. Download `theme.css` and `manifest.json` from [Releases](https://github.com/liicos/obsidian-wolai-theme/releases/latest)
 2. Place them in `.obsidian/themes/Wolai/` inside your vault
 3. Open Obsidian → Settings → Appearance → Themes, and select **Wolai**
+
+### Links
+
+- Community listing: https://community.obsidian.md/themes/wolai
+- GitHub repository: https://github.com/liicos/obsidian-wolai-theme
+- Latest release: https://github.com/liicos/obsidian-wolai-theme/releases/latest
