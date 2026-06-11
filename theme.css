@@ -1,227 +1,229 @@
-/* Wolai Theme for Obsidian
- * Inspired by the clean, minimal design of Wolai (wolai.com)
- * ----------------------------------------- */
+/* ===========================================
+   Wolai Theme for Obsidian
+   Design tokens sourced directly from wolai.com
+   =========================================== */
 
 /* =========================================
-   COLOR TOKENS
+   CSS VARIABLES — sourced from wolai.com
+   Light:  --wolai-bg: #fff; text: rgba(0,0,0,0.85)
+   Dark:   html[theme="dark"] { --wolai-bg: #1a1a1c }
+   Brand:  #CF5659 (coral-red accent)
    ========================================= */
 body {
   /* Brand */
-  --wolai-blue: #4a6ef5;
-  --wolai-blue-hover: #3b5de0;
-  --wolai-blue-light: #ebefff;
-  --wolai-blue-muted: #c5cffb;
+  --wolai-red:          #CF5659;
+  --wolai-red-hover:    #B84C4E;
+  --wolai-red-active:   #DB615D;
+  --wolai-red-light:    #ffeded;
+  --wolai-red-muted:    rgba(235, 87, 87, 0.12);
 
-  /* Neutral */
-  --wolai-gray-50: #f7f7f8;
-  --wolai-gray-100: #f0f0f2;
-  --wolai-gray-200: #e4e4e8;
-  --wolai-gray-300: #d1d1d8;
-  --wolai-gray-400: #9999a8;
-  --wolai-gray-500: #6b6b7e;
-  --wolai-gray-600: #4a4a5a;
-  --wolai-gray-700: #2e2e3a;
-  --wolai-gray-800: #1c1c26;
-  --wolai-gray-900: #111118;
+  /* Radius — from wolai source */
+  --wolai-radius-xs:  2px;
+  --wolai-radius-sm:  4px;
+  --wolai-radius-md:  8px;
+  --wolai-radius-lg:  12px;
+  --wolai-radius-pill: 43px;
 
-  /* Semantic */
-  --wolai-red: #f05050;
-  --wolai-orange: #f07830;
-  --wolai-yellow: #f0b030;
-  --wolai-green: #38b060;
-  --wolai-purple: #8860d0;
-
-  /* Radius */
-  --wolai-radius-sm: 4px;
-  --wolai-radius-md: 8px;
-  --wolai-radius-lg: 12px;
-
-  /* Shadow */
-  --wolai-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --wolai-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.05);
-  --wolai-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10), 0 4px 8px rgba(0, 0, 0, 0.06);
+  /* Shadows — from wolai source */
+  --wolai-shadow-sm:   rgb(234, 234, 234) 0px 0px 0px 0.5px;
+  --wolai-shadow-md:   rgba(0, 0, 0, 0.07) 0px 4px 20px 0px;
+  --wolai-shadow-lg:   rgba(123, 46, 46, 0.11) 0px 6px 11px 0px;
 }
 
 /* =========================================
    LIGHT THEME
+   Source: :root { --wolai-bg: #fff; }
    ========================================= */
 .theme-light {
-  --background-primary: #ffffff;
-  --background-primary-alt: var(--wolai-gray-50);
-  --background-secondary: var(--wolai-gray-50);
-  --background-secondary-alt: var(--wolai-gray-100);
-  --background-modifier-border: var(--wolai-gray-200);
-  --background-modifier-border-hover: var(--wolai-gray-300);
-  --background-modifier-border-focus: var(--wolai-blue-muted);
-  --background-modifier-hover: var(--wolai-gray-100);
-  --background-modifier-active-hover: var(--wolai-blue-light);
-  --background-modifier-form-field: #ffffff;
-  --background-modifier-form-field-highlighted: #ffffff;
+  /* Background — wolai: bg=white, hover=#ececec, secondary=#fafafa */
+  --background-primary:               #ffffff;
+  --background-primary-alt:           #fafafa;
+  --background-secondary:             #fafafa;
+  --background-secondary-alt:         #f3f3f3;
+  --background-modifier-border:       #e1e1e1;
+  --background-modifier-border-hover: #d0d0d0;
+  --background-modifier-border-focus: rgba(207, 86, 89, 0.4);
+  --background-modifier-hover:        #ececec;
+  --background-modifier-active-hover: #ffeded;
+  --background-modifier-form-field:   #ffffff;
 
-  --text-normal: var(--wolai-gray-800);
-  --text-muted: var(--wolai-gray-500);
-  --text-faint: var(--wolai-gray-400);
-  --text-on-accent: #ffffff;
-  --text-accent: var(--wolai-blue);
-  --text-accent-hover: var(--wolai-blue-hover);
-  --text-selection: var(--wolai-blue-light);
-  --text-highlight-bg: #fff3b0;
+  /* Text — wolai: primary=rgba(0,0,0,0.85), secondary=rgba(0,0,0,0.65), muted=rgba(0,0,0,0.45) */
+  --text-normal:         rgba(0, 0, 0, 0.85);
+  --text-muted:          rgba(0, 0, 0, 0.65);
+  --text-faint:          rgba(0, 0, 0, 0.45);
+  --text-on-accent:      #ffffff;
+  --text-accent:         #CF5659;
+  --text-accent-hover:   #B84C4E;
+  --text-selection:      #ffeded;
+  --text-highlight-bg:   #fff3b0;
 
-  --interactive-normal: var(--wolai-gray-100);
-  --interactive-hover: var(--wolai-gray-200);
-  --interactive-accent: var(--wolai-blue);
-  --interactive-accent-hover: var(--wolai-blue-hover);
-  --interactive-success: var(--wolai-green);
+  /* Interactive */
+  --interactive-normal:        #f3f3f3;
+  --interactive-hover:         #ececec;
+  --interactive-accent:        #CF5659;
+  --interactive-accent-hover:  #B84C4E;
+  --interactive-success:       #38b060;
 
-  --scrollbar-bg: transparent;
-  --scrollbar-thumb-bg: var(--wolai-gray-200);
-  --scrollbar-active-thumb-bg: var(--wolai-gray-300);
+  /* Scrollbar — wolai: transparent track, subtle thumb */
+  --scrollbar-bg:                transparent;
+  --scrollbar-thumb-bg:          #e1e1e1;
+  --scrollbar-active-thumb-bg:   #c8c8c8;
 
-  --divider-color: var(--wolai-gray-200);
+  /* Components */
+  --divider-color:               #eaeaea;
+  --code-background:             #fafafa;
+  --code-normal:                 #c0392b;
+  --tag-background:              #ffeded;
+  --tag-color:                   #CF5659;
+  --tag-color-hover:             #B84C4E;
+  --tag-background-hover:        rgba(207, 86, 89, 0.18);
+  --blockquote-border-color:     #CF5659;
+  --blockquote-background-color: #ffeded;
+  --blockquote-color:            rgba(0, 0, 0, 0.65);
+  --table-header-background:     #fafafa;
+  --table-row-alt-background:    #fafafa;
+  --table-border-color:          #eaeaea;
+  --hr-color:                    #eaeaea;
+  --checkbox-color:              #CF5659;
+  --checkbox-color-hover:        #B84C4E;
+  --checkbox-border-color:       #d0d0d0;
+  --bold-color:                  rgba(0, 0, 0, 0.85);
+  --italic-color:                rgba(0, 0, 0, 0.65);
 
-  --code-background: var(--wolai-gray-50);
-  --code-normal: #c0392b;
+  /* Nav — wolai: color=#333, hover bg=#eeeeee, active=brand red */
+  --nav-item-color:              #333333;
+  --nav-item-color-hover:        rgba(0, 0, 0, 0.85);
+  --nav-item-color-active:       #CF5659;
+  --nav-item-background-hover:   #eeeeee;
+  --nav-item-background-active:  #ffeded;
 
-  --tag-background: var(--wolai-blue-light);
-  --tag-color: var(--wolai-blue);
-  --tag-color-hover: var(--wolai-blue-hover);
-  --tag-background-hover: var(--wolai-blue-muted);
+  /* Titlebar & tabs */
+  --titlebar-background:         rgba(255, 255, 255, 0.88);
+  --titlebar-background-focused: rgba(255, 255, 255, 0.95);
+  --tab-background-active:       #ffffff;
+  --tab-text-color-focused-active: rgba(0, 0, 0, 0.85);
 
-  --blockquote-border-color: var(--wolai-blue-muted);
-  --blockquote-background-color: var(--wolai-blue-light);
-  --blockquote-color: var(--wolai-gray-600);
-
-  --table-header-background: var(--wolai-gray-50);
-  --table-row-alt-background: var(--wolai-gray-50);
-  --table-border-color: var(--wolai-gray-200);
-
-  --hr-color: var(--wolai-gray-200);
-
-  --checkbox-color: var(--wolai-blue);
-  --checkbox-color-hover: var(--wolai-blue-hover);
-  --checkbox-border-color: var(--wolai-gray-300);
-
-  --bold-color: var(--wolai-gray-900);
-  --italic-color: var(--wolai-gray-700);
-
-  --nav-item-color: var(--wolai-gray-600);
-  --nav-item-color-hover: var(--wolai-gray-800);
-  --nav-item-color-active: var(--wolai-blue);
-  --nav-item-background-hover: var(--wolai-gray-100);
-  --nav-item-background-active: var(--wolai-blue-light);
-
-  --titlebar-background: #ffffff;
-  --titlebar-background-focused: #ffffff;
-  --tab-background-active: #ffffff;
-  --tab-text-color-focused-active: var(--wolai-gray-800);
-
-  --ribbon-background: var(--wolai-gray-50);
-  --ribbon-background-collapsed: var(--wolai-gray-50);
+  --ribbon-background:           #fafafa;
+  --ribbon-background-collapsed: #fafafa;
 }
 
 /* =========================================
    DARK THEME
+   Source: html[theme="dark"] {
+     --wolai-bg: #1a1a1c;
+     --wll-color: #fff;
+     --wlp-wrapper-color: #323232;
+     --wlp-color: #909090;
+     --color-basic-200: #3e3e3e;
+     --color-basic-800: #bdbdbd;
+   }
    ========================================= */
 .theme-dark {
-  --background-primary: #1a1a24;
-  --background-primary-alt: #14141c;
-  --background-secondary: #14141c;
-  --background-secondary-alt: #0e0e16;
-  --background-modifier-border: #2a2a38;
-  --background-modifier-border-hover: #363648;
-  --background-modifier-border-focus: #4a5ae0;
-  --background-modifier-hover: #22222e;
-  --background-modifier-active-hover: #242438;
-  --background-modifier-form-field: #22222e;
-  --background-modifier-form-field-highlighted: #2a2a3a;
+  /* Background */
+  --background-primary:               #1a1a1c;
+  --background-primary-alt:           #141416;
+  --background-secondary:             #141416;
+  --background-secondary-alt:         #0f0f11;
+  --background-modifier-border:       #3e3e3e;
+  --background-modifier-border-hover: #4e4e4e;
+  --background-modifier-border-focus: rgba(207, 86, 89, 0.5);
+  --background-modifier-hover:        #323232;
+  --background-modifier-active-hover: #2e1e1e;
+  --background-modifier-form-field:   #222224;
 
-  --text-normal: #d4d4e4;
-  --text-muted: #8888a0;
-  --text-faint: #5a5a72;
-  --text-on-accent: #ffffff;
-  --text-accent: #6a8bff;
-  --text-accent-hover: #8aa0ff;
-  --text-selection: #2a3060;
-  --text-highlight-bg: #4a3a00;
+  /* Text — derived from wolai dark: #fff primary, #bdbdbd secondary, #909090 muted */
+  --text-normal:         #e8e8e8;
+  --text-muted:          #bdbdbd;
+  --text-faint:          #909090;
+  --text-on-accent:      #ffffff;
+  --text-accent:         #e07075;
+  --text-accent-hover:   #ea8a8e;
+  --text-selection:      #3a1e1e;
+  --text-highlight-bg:   #4a3a00;
 
-  --interactive-normal: #22222e;
-  --interactive-hover: #2a2a3a;
-  --interactive-accent: #5a7aff;
-  --interactive-accent-hover: #6a8bff;
-  --interactive-success: #40c070;
+  /* Interactive */
+  --interactive-normal:        #2a2a2c;
+  --interactive-hover:         #323232;
+  --interactive-accent:        #CF5659;
+  --interactive-accent-hover:  #e07075;
+  --interactive-success:       #40c070;
 
-  --scrollbar-bg: transparent;
-  --scrollbar-thumb-bg: #2a2a3a;
-  --scrollbar-active-thumb-bg: #3a3a50;
+  /* Scrollbar */
+  --scrollbar-bg:                transparent;
+  --scrollbar-thumb-bg:          #3e3e3e;
+  --scrollbar-active-thumb-bg:   #4e4e4e;
 
-  --divider-color: #2a2a38;
+  /* Components */
+  --divider-color:               #3e3e3e;
+  --code-background:             #141416;
+  --code-normal:                 #e07075;
+  --tag-background:              #2e1e1e;
+  --tag-color:                   #e07075;
+  --tag-color-hover:             #ea8a8e;
+  --tag-background-hover:        #3a2020;
+  --blockquote-border-color:     #CF5659;
+  --blockquote-background-color: #2e1e1e;
+  --blockquote-color:            #bdbdbd;
+  --table-header-background:     #141416;
+  --table-row-alt-background:    #1e1e20;
+  --table-border-color:          #3e3e3e;
+  --hr-color:                    #3e3e3e;
+  --checkbox-color:              #CF5659;
+  --checkbox-color-hover:        #e07075;
+  --checkbox-border-color:       #4e4e4e;
+  --bold-color:                  #f0f0f0;
+  --italic-color:                #d0d0d0;
 
-  --code-background: #0e0e18;
-  --code-normal: #f07070;
+  /* Nav */
+  --nav-item-color:              #909090;
+  --nav-item-color-hover:        #e8e8e8;
+  --nav-item-color-active:       #e07075;
+  --nav-item-background-hover:   #2a2a2c;
+  --nav-item-background-active:  #2e1e1e;
 
-  --tag-background: #1e2248;
-  --tag-color: #8aa0ff;
-  --tag-color-hover: #aabfff;
-  --tag-background-hover: #262a58;
+  /* Titlebar & tabs */
+  --titlebar-background:         rgba(20, 20, 22, 0.9);
+  --titlebar-background-focused: rgba(20, 20, 22, 0.95);
+  --tab-background-active:       #1a1a1c;
+  --tab-text-color-focused-active: #e8e8e8;
 
-  --blockquote-border-color: #3a4090;
-  --blockquote-background-color: #1a1e38;
-  --blockquote-color: #a0a0c0;
-
-  --table-header-background: #14141c;
-  --table-row-alt-background: #1a1a22;
-  --table-border-color: #2a2a38;
-
-  --hr-color: #2a2a38;
-
-  --checkbox-color: #5a7aff;
-  --checkbox-color-hover: #6a8bff;
-  --checkbox-border-color: #3a3a50;
-
-  --bold-color: #e4e4f4;
-  --italic-color: #c0c0d8;
-
-  --nav-item-color: #8888a0;
-  --nav-item-color-hover: #c0c0d8;
-  --nav-item-color-active: #8aa0ff;
-  --nav-item-background-hover: #22222e;
-  --nav-item-background-active: #1e2248;
-
-  --titlebar-background: #14141c;
-  --titlebar-background-focused: #14141c;
-  --tab-background-active: #1a1a24;
-  --tab-text-color-focused-active: #d4d4e4;
-
-  --ribbon-background: #14141c;
-  --ribbon-background-collapsed: #14141c;
+  --ribbon-background:           #141416;
+  --ribbon-background-collapsed: #141416;
 }
 
 /* =========================================
    TYPOGRAPHY
+   Source: wolai body font stack, sizes
    ========================================= */
 body {
-  --font-text-size: 15px;
-  --line-height-normal: 1.7;
-  --font-text-theme: -apple-system, "PingFang SC", "Microsoft YaHei", BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-monospace-theme: "JetBrains Mono", "Fira Code", "SF Mono", "Cascadia Code",
-    Consolas, "Liberation Mono", monospace;
-  --font-interface-theme: -apple-system, "PingFang SC", "Microsoft YaHei", BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
+  /* Wolai's exact font stack from source */
+  --font-text-theme:       "zh quote", -apple-system, "system-ui", "PingFang SC",
+                           "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI",
+                           "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  --font-interface-theme:  "zh quote", -apple-system, "system-ui", "PingFang SC",
+                           "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI",
+                           "Microsoft YaHei", sans-serif;
+  --font-monospace-theme:  "JetBrains Mono", "Fira Code", "SF Mono", "Cascadia Code",
+                           Consolas, "Liberation Mono", monospace;
 
-  --h1-size: 1.75em;
-  --h2-size: 1.45em;
-  --h3-size: 1.2em;
-  --h4-size: 1.05em;
-  --h5-size: 1em;
-  --h6-size: 1em;
+  /* Wolai base: 16px / line-height 24px (1.5) */
+  --font-text-size:    16px;
+  --line-height-normal: 1.5;
 
-  --h1-weight: 700;
-  --h2-weight: 600;
-  --h3-weight: 600;
-  --h4-weight: 600;
-  --h5-weight: 600;
-  --h6-weight: 600;
+  /* Heading scale — wolai: h1=48px/600, h2=28px/700 */
+  --h1-size:    2em;      /* 32px at 16px base */
+  --h2-size:    1.5em;    /* 24px */
+  --h3-size:    1.25em;   /* 20px */
+  --h4-size:    1.1em;
+  --h5-size:    1em;
+  --h6-size:    1em;
+
+  --h1-weight:  700;
+  --h2-weight:  700;
+  --h3-weight:  600;
+  --h4-weight:  600;
+  --h5-weight:  600;
+  --h6-weight:  600;
 
   --h1-line-height: 1.3;
   --h2-line-height: 1.35;
@@ -233,23 +235,25 @@ body {
 }
 
 /* =========================================
-   LAYOUT & WORKSPACE
+   TITLEBAR — wolai glassmorphism header
+   Source: backdrop-filter: blur(16px);
+           background: rgba(255,255,255,0.88)
    ========================================= */
-.workspace-leaf-content {
-  border-radius: 0;
+.titlebar,
+.workspace-tab-header-container-outer {
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
-.workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type::before {
-  display: none;
-}
-
-/* Tab bar */
+/* =========================================
+   WORKSPACE & TABS
+   ========================================= */
 .workspace-tab-header-container {
   border-bottom: 1px solid var(--background-modifier-border);
 }
 
 .workspace-tab-header {
-  border-radius: var(--wolai-radius-sm) var(--wolai-radius-sm) 0 0;
+  border-radius: var(--wolai-radius-xs) var(--wolai-radius-xs) 0 0;
 }
 
 .workspace-tab-header.is-active {
@@ -258,24 +262,23 @@ body {
 }
 
 /* =========================================
-   EDITOR / CONTENT
+   EDITOR CONTENT
+   Source: --wolai-editor-color: #212529
    ========================================= */
 
-/* Note title */
+/* Inline title — wolai hero h1 style */
 .inline-title {
   font-size: 2em;
   font-weight: 700;
+  line-height: 1.3;
   letter-spacing: -0.01em;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid var(--background-modifier-border);
-  margin-bottom: 1em;
+  color: var(--text-normal);
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid var(--divider-color);
+  margin-bottom: 1.2em;
 }
 
 /* Headings */
-.cm-header-1, h1 { color: var(--text-normal); }
-.cm-header-2, h2 { color: var(--text-normal); }
-.cm-header-3, h3 { color: var(--text-normal); }
-
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
   margin-top: 1.5em;
@@ -283,18 +286,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  padding-bottom: 0.25em;
-  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--divider-color);
 }
 
-/* Horizontal rule */
+/* Horizontal rule — wolai: border: 1px solid #eaeaea */
 hr {
   border: none;
   border-top: 1px solid var(--hr-color);
   margin: 2em 0;
 }
 
-/* Blockquote */
+/* Blockquote — wolai brand red left border */
 blockquote {
   border-left: 3px solid var(--blockquote-border-color);
   background-color: var(--blockquote-background-color);
@@ -308,13 +311,13 @@ blockquote p:last-child {
   margin-bottom: 0;
 }
 
-/* Code */
+/* Code — wolai: .fTbwUB font-size:14px; border-radius:2px */
 code {
   font-family: var(--font-monospace-theme);
   font-size: 0.875em;
   background-color: var(--code-background);
   padding: 0.15em 0.35em;
-  border-radius: var(--wolai-radius-sm);
+  border-radius: var(--wolai-radius-xs);
   border: 1px solid var(--background-modifier-border);
 }
 
@@ -327,18 +330,20 @@ pre code {
 pre {
   background-color: var(--code-background);
   border: 1px solid var(--background-modifier-border);
-  border-radius: var(--wolai-radius-md);
+  border-radius: var(--wolai-radius-sm);
   padding: 1em 1.25em;
   overflow-x: auto;
+  box-shadow: var(--wolai-shadow-sm);
 }
 
-/* Tables */
+/* Tables — wolai: border #eaeaea, header bg #fafafa */
 table {
   border-collapse: collapse;
   width: 100%;
+  border: 1px solid var(--table-border-color);
   border-radius: var(--wolai-radius-md);
   overflow: hidden;
-  border: 1px solid var(--table-border-color);
+  font-size: 0.95em;
 }
 
 thead tr {
@@ -364,16 +369,17 @@ tbody tr:nth-child(even) {
   background-color: var(--table-row-alt-background);
 }
 
-/* Tags */
+/* Tags — wolai pill style, brand red */
 .tag {
   font-size: 0.8em;
-  padding: 0.15em 0.6em;
-  border-radius: 999px;
+  padding: 0.1em 0.6em;
+  border-radius: var(--wolai-radius-pill);
   background-color: var(--tag-background);
   color: var(--tag-color);
   border: none;
   text-decoration: none;
   font-weight: 500;
+  transition: background-color 0.1s, color 0.1s;
 }
 
 .tag:hover {
@@ -382,12 +388,12 @@ tbody tr:nth-child(even) {
   text-decoration: none;
 }
 
-/* Links */
+/* Links — wolai: color #333 nav, accent for internal */
 a.internal-link {
   color: var(--text-accent);
   text-decoration: none;
-  border-bottom: 1px solid var(--wolai-blue-muted);
-  transition: color 0.15s, border-color 0.15s;
+  border-bottom: 1px solid rgba(207, 86, 89, 0.3);
+  transition: color 0.1s linear, border-color 0.1s linear;
 }
 
 a.internal-link:hover {
@@ -397,7 +403,7 @@ a.internal-link:hover {
 
 /* Checkboxes */
 input[type="checkbox"] {
-  border-radius: var(--wolai-radius-sm);
+  border-radius: var(--wolai-radius-xs);
   border: 1.5px solid var(--checkbox-border-color);
 }
 
@@ -408,40 +414,60 @@ input[type="checkbox"] {
 
 /* Callouts */
 .callout {
-  border-radius: var(--wolai-radius-md);
-  border-left: 4px solid var(--callout-color, var(--wolai-blue));
+  border-radius: var(--wolai-radius-sm);
+  border-left: 3px solid var(--callout-color, var(--wolai-red));
   padding: 0.75em 1em;
   margin: 1em 0;
 }
 
 .callout-title {
   font-weight: 600;
-  font-size: 0.9em;
+  font-size: 0.875em;
   margin-bottom: 0.35em;
 }
 
 /* =========================================
    SIDEBAR / FILE EXPLORER
+   Source: ._3nnbN:hover { background: #eeeeee; border-radius: 5px }
    ========================================= */
 .nav-folder-title,
 .nav-file-title {
   border-radius: var(--wolai-radius-sm);
   padding: 3px 8px;
+  transition: background-color 0.1s linear, color 0.1s linear;
+  color: var(--nav-item-color);
 }
 
-.nav-file-title.is-active,
-.nav-folder-title.is-active {
+.nav-folder-title:hover,
+.nav-file-title:hover {
+  background-color: var(--nav-item-background-hover);
+  color: var(--nav-item-color-hover);
+}
+
+.nav-file-title.is-active {
   background-color: var(--nav-item-background-active);
   color: var(--nav-item-color-active);
   font-weight: 500;
 }
 
-.nav-folder-collapse-indicator {
-  color: var(--text-faint);
+/* =========================================
+   SEARCH HIGHLIGHT
+   Source: text-highlight-bg from wolai
+   ========================================= */
+.search-result-file-title {
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.search-result-file-match mark {
+  background-color: var(--text-highlight-bg);
+  border-radius: 2px;
+  padding: 0 2px;
 }
 
 /* =========================================
    MODALS & POPOVERS
+   Source: ._1p0uF { border-radius: 4px; box-shadow: rgba(123,46,46,0.11) 0px 6px 11px }
    ========================================= */
 .modal {
   border-radius: var(--wolai-radius-lg);
@@ -450,7 +476,7 @@ input[type="checkbox"] {
 }
 
 .suggestion-container {
-  border-radius: var(--wolai-radius-md);
+  border-radius: var(--wolai-radius-sm);
   border: 1px solid var(--background-modifier-border);
   box-shadow: var(--wolai-shadow-md);
   overflow: hidden;
@@ -458,6 +484,7 @@ input[type="checkbox"] {
 
 .suggestion-item {
   border-radius: 0;
+  transition: background-color 0.1s;
 }
 
 .suggestion-item.is-selected {
@@ -466,6 +493,8 @@ input[type="checkbox"] {
 
 /* =========================================
    SCROLLBAR
+   Source: ::-webkit-scrollbar { background: transparent }
+           ::-webkit-scrollbar-thumb { border-radius: 4px }
    ========================================= */
 ::-webkit-scrollbar {
   width: 6px;
@@ -478,7 +507,7 @@ input[type="checkbox"] {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb-bg);
-  border-radius: 999px;
+  border-radius: var(--wolai-radius-sm);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -495,21 +524,15 @@ input[type="checkbox"] {
 }
 
 /* =========================================
-   SEARCH
+   RIBBON
    ========================================= */
-.search-result-file-title {
-  font-weight: 600;
-  color: var(--text-normal);
-}
-
-.search-result-file-match mark {
-  background-color: var(--text-highlight-bg);
-  border-radius: 2px;
-  padding: 0 2px;
+.side-dock-ribbon {
+  border-right: 1px solid var(--background-modifier-border);
 }
 
 /* =========================================
-   MOBILE ADJUSTMENTS
+   MOBILE
+   Source: wolai mobile font-size 16px base
    ========================================= */
 .is-mobile {
   --font-text-size: 16px;
