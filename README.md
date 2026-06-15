@@ -2,7 +2,7 @@
 
 [![Community Theme](https://img.shields.io/badge/Obsidian-Community%20Theme-7c3aed)](https://community.obsidian.md/themes/wolai)
 
-一个受 [Wolai](https://www.wolai.com) 设计风格启发的 Obsidian 主题，追求简洁、现代的笔记体验。
+wolai 原生主题移植，追求简洁、现代的笔记体验。
 
 也可在 [Obsidian 社区主题页](https://community.obsidian.md/themes/wolai) 查看详情并安装。
 
@@ -10,7 +10,7 @@
 
 - 干净简洁的视觉风格，减少视觉干扰
 - 支持亮色 / 暗色双模式
-- 中文字体优化（PingFang SC、Microsoft YaHei）
+- 中文字体优化
 - 舒适的行距与排版，适合长时间阅读
 - 优化的代码块、表格、引用块样式
 - 圆角卡片式 UI 元素
